@@ -1,0 +1,190 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("black.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); /* 0.5 is the alpha value for 50% opacity */
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+section.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-info {
+    flex: 2;
+    min-width: 300px;
+    margin-left: 20px;
+}
+
+.single-about-txt h3 {
+    font-size: 24px;
+    color: darkgray;
+}
+
+.single-about-txt p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #f4f4f9;
+}
+
+.projects-section h3 {
+    font-size: 22px;
+    color: white;
+    margin-top: 30px;
+}
+
+.projects-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects-section li {
+    font-size: 18px;
+    color: #f4f4f9;
+    margin-top: 10px;
+}
+
+.profile-info-accounts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.single-about-add-info h3 {
+    font-size: 18px;
+    color: white;
+}
+
+.single-about-add-info p {
+    font-size: 16px;
+    margin: 5px 0 20px;
+    color: #f4f4f9;
+}
+
+.about-profile {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-about-img img {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-info, .about-profile {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .about-profile {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .single-about-txt h3 {
+        font-size: 22px;
+    }
+
+    .single-about-txt p {
+        font-size: 16px;
+    }
+
+    .projects-section h3 {
+        font-size: 20px;
+    }
+
+    .projects-section li {
+        font-size: 16px;
+    }
+
+    .single-about-add-info h3 {
+        font-size: 16px;
+    }
+
+    .single-about-add-info p {
+        font-size: 14px;
+    }
+
+    .profile-info-accounts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .single-about-txt h3 {
+        font-size: 20px;
+    }
+
+    .single-about-txt p {
+        font-size: 14px;
+    }
+
+    .projects-section h3 {
+        font-size: 18px;
+    }
+
+    .projects-section li {
+        font-size: 14px;
+    }
+
+    .single-about-add-info h3 {
+        font-size: 14px;
+    }
+
+    .single-about-add-info p {
+        font-size: 12px;
+    }
+
+    .profile-info-accounts {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info {
+        margin-left: 0;
+    }
+
+    .about-profile {
+        max-width: 100%;
+    }
+}

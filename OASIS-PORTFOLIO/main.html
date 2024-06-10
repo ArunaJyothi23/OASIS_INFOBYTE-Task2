@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aruna Jyothi Boddu - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutme.css">
+    <link rel="stylesheet" href="contact.css">  
+    <style>
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    background: teal;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.home {
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('white.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); /* 0.5 is the alpha value for 50% opacity */
+    color: black;
+}
+
+.home h2, .home h3 {
+    margin-bottom: 20px;
+}
+
+.home p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.btn-box .btn {
+    margin: 5px;
+}
+
+.about {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about h3 {
+    margin-bottom: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-profile {
+    flex: 1;
+    text-align: center;
+}
+
+.about-profile img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* Services Section */
+.services-section {
+    padding: 100px 0;
+    color: black;
+    min-height: 400px; /* Adjust as needed */
+    background-image: url('white_lap.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.services-section h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.service {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    color: #000;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    background-color: teal;
+    color: #000;
+}
+
+.service i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 0;
+    background: black;
+    color: white;
+    min-height: 400px; /* Adjust as needed */
+    background-image: url('black.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.skills-section h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.skills-section .row > div {
+    margin-bottom: 30px;
+}
+
+/* Contact Page */
+.contact-box {
+    background: black;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-box .field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.contact-box textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-box button:hover {
+    background-color: #007bff;
+}
+
+.footer {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .home {
+        padding: 70px 0;
+    }
+    .about {
+        padding: 70px 0;
+    }
+    .services-section {
+        padding: 70px 0;
+    }
+    .skills-section,
+    .contact-box {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .about-info,
+    .about-profile {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .service {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: center; /* Center align the navbar items on collapse */
+    }
+    .header {
+        padding: 10px 0;
+    }
+    .home {
+        padding: 50px 0;
+    }
+    .about {
+        padding: 50px 0;
+    }
+    .services-section {
+        padding: 50px 0;
+    }
+    .skills-section,
+    .contact-box {
+        padding: 50px 0;
+    }
+    .service {
+        padding: 15px;
+    }
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .home h2 {
+        font-size: 1.5rem;
+    }
+    .home h3 {
+        font-size: 1.25rem;
+    }
+    .home p {
+        font-size: 1rem;
+    }
+    .about h3 {
+        font-size: 1.5rem;
+    }
+    .about p {
+        font-size: 1rem;
+    }
+    .service i {
+        font-size: 40px;
+    }
+    .service h4 {
+        font-size: 1.25rem;
+    }
+    .service p {
+        font-size: 1rem;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a href="#" class="navbar-brand">Aruna Jyothi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="home">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h2>Welcome to My Portfolio</h2>
+                        <h3>Web Developer</h3>
+                        <p>Hello! I'm Aruna Jyothi Boddu, a Web Developer and Marketing Manager at Swiggy. I'm currently pursuing my 3rd year B.Tech in CSE at RGUKT Ongole. I specialize in creating intuitive, user-friendly websites and applications.</p>
+                        <div class="btn-box">
+                            <a href="#about" class="btn btn-primary">About Me</a>
+                            <a href="#contact" class="btn btn-secondary">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="section-heading">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-info">
+                    <div class="single-about-txt">
+                        <h3>Web Developer</h3>
+                        <p>Hello! I'm Aruna Jyothi Boddu, a Web Developer and Marketing Manager at Swiggy. I'm currently pursuing my 3rd year B.Tech in CSE at RGUKT Ongole. I specialize in creating intuitive, user-friendly websites and applications.</p>
+                        <!-- Projects Section -->
+                        <div class="projects-section">
+                            <h3>Projects</h3>
+                            <ul>
+                                <li>Student Complaint Management System in Hostel Rooms
+                                    <ul>
+                                        <li>Technologies: HTML, CSS, JavaScript, React, Bootstrap</li>
+                                    </ul>
+                                </li>
+                                <li>YouTube Adview Prediction using Machine Learning</li>
+                                <li>Gallery Spot Web Application
+                                    <ul>
+                                        <li>Technologies: HTML, CSS, JavaScript, API</li>
+                                    </ul>
+                                </li>
+                                <li>Portfolio Website
+                                    <ul>
+                                        <li>Technologies: HTML, CSS, JavaScript</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="profile-info-accounts">
+                            <div class="phone-info">
+                                <div class="single-about-add-info">
+                                    <h3><i class="fas fa-phone-alt"></i> Phone</h3>
+                                    <p><a href="tel:7037903051">Phone</a></p>
+                                </div>
+                            </div>
+                            <div class="email-info">
+                                <div class="single-about-add-info">
+                                    <h3><i class="fas fa-envelope"></i> Email</h3>
+                                    <p><a href="mailto:jyothi123@mail.com">Gmail</a></p>
+                                </div>
+                            </div>
+                            <div class="web-info">
+                                <div class="single-about-add-info">
+                                    <h3><i class="fab fa-linkedin"></i> LinkedIn</h3>
+                                    <p><a href="https://www.linkedin.com/in/aruna-jyothi-boddu-9555852ab/" target="_blank">LinkedIn</a></p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                <div class="about-profile">
+                    <!-- <div class="single-about-img">
+                        <img src="black_lap.jpg" alt="profile_image">
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        
+        <section class="services-section" id="services">
+            <div class="container">
+                <h2>My Services</h2>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="service">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Web Development</h3>
+                            <p>I offer professional website development services using the latest technologies like HTML, CSS, JavaScript, React.js, and Bootstrap.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                            <p>I create responsive and mobile-friendly websites to ensure a seamless user experience across all devices.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="service">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>SEO Optimization</h3>
+                            <p>Improve your website's visibility on search engines with my SEO optimization services, including keyword research and on-page SEO.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="row">
+                    <div class="col">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Python</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Adaptability</li>
+                            <li>Communication</li>
+                            <li>Problem-Solving</li>
+                            <li>Teamwork</li>
+                            <li>Self-Independent</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+                    <section id="contact">
+                        <div class="contact-container">
+                            <div class="contact-box">
+                                <div class="left">
+                                    <!-- <div class="profile-info-accounts">
+                                        <div class="phone-info">
+                                            <div class="single-about-add-info">
+                                                <h3><i class="fas fa-phone-alt"></i> Phone</h3>
+                                                <p><a href="tel:7037903051">7037903051</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="email-info">
+                                            <div class="single-about-add-info">
+                                                <h3><i class="fas fa-envelope"></i> Email</h3>
+                                                <p><a href="mailto:jyothi123@mail.com">jyothi123@mail.com</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="web-info">
+                                            <div class="single-about-add-info">
+                                                <h3><i class="fas fa-globe"></i> Website</h3>
+                                                <p><a href="http://GallerySpot.com" target="_blank">GallerySpot.com</a></p>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                <div class="right">
+                                    <h2>Contact Us</h2>
+                                    <input type="text" class="field" placeholder="Your Name">
+                                    <input type="email" class="field" placeholder="Your Email">
+                                    <input type="text" class="field" placeholder="Phone">
+                                    <textarea placeholder="Message" class="field"></textarea>
+                                    <button class="btn">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+            <footer class="footer">
+                <div class="container">
+                    <p class="text-center">&copy; 2024 Aruna Jyothi Boddu. All Rights Reserved.</p>
+                </div>
+            </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
